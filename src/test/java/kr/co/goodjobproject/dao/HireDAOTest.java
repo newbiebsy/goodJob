@@ -8,11 +8,7 @@ import java.util.List;
 import org.junit.jupiter.api.Test;
 
 import kr.co.goodjobproject.dto.PageUtil;
-import lombok.extern.log4j.Log4j;
-import lombok.extern.log4j.Log4j2;
-import lombok.extern.slf4j.Slf4j;
 
-@Log4j2
 class HireDAOTest {
 	
 	private HireDAO dao;

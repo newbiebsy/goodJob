@@ -9,10 +9,7 @@ import org.junit.jupiter.api.Test;
 import kr.co.goodjobproject.dao.HireDAO;
 import kr.co.goodjobproject.dto.HireListDTO;
 import kr.co.goodjobproject.dto.PageUtil;
-import lombok.extern.log4j.Log4j;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
 class MainControllerTest {
 	
 	private HireDAO dao;
