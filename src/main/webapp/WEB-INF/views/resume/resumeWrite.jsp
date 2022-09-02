@@ -184,6 +184,10 @@
 	.writeBtn>input {
 		font-size: 17px;
 	}
+	.myPhoto img{
+		width: 103px;
+		height : 132px;
+	}
 	
 	
 </style>
@@ -339,8 +343,16 @@
 		<!-- 기본 정보 -->
 		<div class="myInfo">
 			<div class="myPhoto">
-				<img src="images/myPhoto.png" alt="" />
+			<c:choose>
+				<c:when test="${Mlist.mimg != null }">
+					<img src="/goodjob/uploadfile/${Mlist.mimg }" alt="" />
+				</c:when>
+				<c:otherwise>
+					<img src="/goodjob/images/myPhoto.png" alt="" />
+				</c:otherwise>
+			</c:choose>
 			</div>
+			
 			<div class="info">
 				<dl class="basicInfo" style="padding-bottom: 10px;">
 					<dt class="blind">이름</dt>
@@ -363,7 +375,7 @@
 			</div>
 		</div>
 		
-		<form action="resumeWriteOk" method="post">
+		<form action="/goodjob/resumeWriteOk" method="post">
 		<input type="hidden" id="workCnt" name="workCnt" value="${workCnt }"/>
 		<!-- 제목 -->
 		<div class="resumeTitle">

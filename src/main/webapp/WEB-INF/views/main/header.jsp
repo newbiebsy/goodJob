@@ -45,11 +45,11 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 	#reg{
 		margin-left: 140px;
 	}
-	
-	.row#row{
-		padding-left: 80px;
-    	margin-right: -50px;
+	#centerSort {
+	    text-align: center;
+	    margin: auto;
 	}
+	
 </style>
 <!-- jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -58,7 +58,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		$(".resume").on("click", function(){
 			console.log("test");
 			alert("로그인 후 이용 가능합니다.");
-			$(".resume").attr("href", "/login/loginform");
+			$(".resume").attr("href", "/goodjob/login/loginform");
 		})
 	})
 </script>
@@ -68,8 +68,8 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" id="header">
 			<div class="container-fluid">
 				<nav class="navbar navbar-light bg-white">
-					<a class="navbar-brand" href="/"> 
-						<img src="/images/logo.png" alt="" width="130" height="35">
+					<a class="navbar-brand" href="/goodjob"> 
+						<img src="/goodjob/images/logo.png" alt="" width="130" height="35">
 					</a>
 				</nav>
 				<!-- <button class="navbar-toggler" type="button"
@@ -81,16 +81,16 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<div class="collapse navbar-collapse" id="navbarContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuName">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/hireList">채용공고</a></li>
+							aria-current="page" href="/goodjob/hireList">채용공고</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/reviewList">기업리뷰</a></li>
+							aria-current="page" href="/goodjob/reviewList">기업리뷰</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/comm/commList">커뮤니티</a></li>
+							aria-current="page" href="/goodjob/comm/commList">커뮤니티</a></li>
 						<li class="nav-item"><a class="nav-link active resume"
 							aria-current="page" href="/">이력서</a></li>
 							<!-- 회원/기업 주소 다르게 -->
 					</ul>					
-					<a href="/login/loginform"><input id="login_Btn" class="btn btn-primary btn-sm rounded-pill" type="button" value="로그인" /></a>
+					<a href="/goodjob/login/loginform"><input id="login_Btn" class="btn btn-primary btn-sm rounded-pill" type="button" value="로그인" /></a>
 					<input id="registerBtn" class="btn btn-outline-secondary btn-sm rounded-pill" type="button" value="회원가입" data-bs-toggle="modal" data-bs-target="#register"/>
 				</div>
 			</div>
@@ -109,13 +109,13 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
       <div class="modal-body" style= "padding-top: 30px; padding-bottom:30px;">
 		  <div class="container-fluid">
 		    <div class="row">
-		      <div class="col-sm-9">
-		        <div class="row" id="row">
+		      <div class="col-sm-9" id="centerSort">
+		        <div class="row">
 		          <div class="col-8 col-sm-6">
-		            <a href="/login/registerformMember"><button type="button" class="btn btn-outline-primary" style="width: 140px; ">개인 회원</button></a>
+		            <a href="/goodjob/login/registerformMember"><button type="button" class="btn btn-outline-primary" style="width: 140px; ">개인 회원</button></a>
 		          </div>
 		          <div class="col-4 col-sm-6">
-		            <a href="/login/registerformCompany"><button type="button" class="btn btn-outline-primary" style="width: 140px; ">기업 회원</button></a>
+		            <a href="/goodjob/login/registerformCompany"><button type="button" class="btn btn-outline-primary" style="width: 140px; ">기업 회원</button></a>
 		          </div>
 		        </div>
 		      </div>

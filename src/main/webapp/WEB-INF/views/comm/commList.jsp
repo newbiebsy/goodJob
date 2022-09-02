@@ -153,7 +153,7 @@
 		
 	    // writeBtn 클릭시 url 보내줌
 	    $(".writeBtn").on("click",function(){
-	    	location.href = "/comm/commWrite";
+	    	location.href = "/goodjob/comm/commWrite";
 	    });
 	    
 	 	// 선택했던 tag 클릭된 상태로 보여주기
@@ -180,27 +180,27 @@
 	<div class="bg-light back">
 		<div class="container innerback" style="max-width: 1000px;">
 			<div class="container tagHeader" >
-				<a href="/comm/commList/BEST" ><button type="button" class="btn mx-3 tagBtn" value="BEST" >BEST</button></a>
-				<a href="/comm/commList/전체" ><button type="button" class="btn mx-3 tagBtn" value="전체" >전체</button></a>
-				<a href="/comm/commList/취준" ><button type="button" class="btn mx-3 tagBtn" value="취준">취준</button></a>
-				<a href="/comm/commList/이직" ><button type="button" class="btn mx-3 tagBtn" value="이직">이직</button></a>
-				<a href="/comm/commList/회사생활" ><button type="button" class="btn mx-3 tagBtn" value="회사생활">회사생활</button></a>
-				<a href="/comm/commList/라이프스타일" ><button type="button" class="btn mx-3 tagBtn" value="라이프스타일">라이프스타일</button></a>
-				<a href="/comm/commList/잡담" ><button type="button" class="btn mx-3 tagBtn" value="잡담" >잡담</button></a>
-				<a href="/comm/commList/Q%26A" ><button type="button" class="btn mx-3 tagBtn" value="Q&A" >Q&A</button></a>
+				<a href="/goodjob/comm/commList/BEST" ><button type="button" class="btn mx-3 tagBtn" value="BEST" >BEST</button></a>
+				<a href="/goodjob/comm/commList/전체" ><button type="button" class="btn mx-3 tagBtn" value="전체" >전체</button></a>
+				<a href="/goodjob/comm/commList/취준" ><button type="button" class="btn mx-3 tagBtn" value="취준">취준</button></a>
+				<a href="/goodjob/comm/commList/이직" ><button type="button" class="btn mx-3 tagBtn" value="이직">이직</button></a>
+				<a href="/goodjob/comm/commList/회사생활" ><button type="button" class="btn mx-3 tagBtn" value="회사생활">회사생활</button></a>
+				<a href="/goodjob/comm/commList/라이프스타일" ><button type="button" class="btn mx-3 tagBtn" value="라이프스타일">라이프스타일</button></a>
+				<a href="/goodjob/comm/commList/잡담" ><button type="button" class="btn mx-3 tagBtn" value="잡담" >잡담</button></a>
+				<a href="/goodjob/comm/commList/Q%26A" ><button type="button" class="btn mx-3 tagBtn" value="Q&A" >Q&A</button></a>
 			</div>
 			<div class="container writeWrap">
 				<div class="container row my-3 writeDiv">
 					<button type="button"  class="writeBtn" style="width: 900px; padding-left: 20px; padding-right: 20px;">
 						회사생활이나 고민에 대해서 자유롭게 이야기 해주세요!
-						<img style="width: 35px;" alt="글쓰기사진" src="/images/writing.png">
+						<img style="width: 35px;" alt="글쓰기사진" src="/goodjob/images/writing.png">
 					</button>
 				</div>
 			</div>
 			
 			<c:forEach var="dto" items="${list }" varStatus="i" >
 			<div class="container boardList">
-			<a href="/comm/commDetail?bno=${dto.bno}" >
+			<a href="/goodjob/comm/commDetail?bno=${dto.bno}" >
 			<div class="container" style="width: 940px;">
 				<div class="container idHeader"> 
 					<span>${idList[i.index] }</span>
@@ -240,13 +240,13 @@
 			<div class="pageInfo_area">
 				<ul id="pageInfo" class="pagination pageInfo">
 				<c:if test="${map.prev}">
-					<li class="pageInfo_btn page-item"><a class="page-link" href="/comm/commList?currentPage=${map.currentPage-5}">이전</a></li>
+					<li class="pageInfo_btn page-item"><a class="page-link" href="/goodjob/comm/commList?currentPage=${map.currentPage-5}">이전</a></li>
 				</c:if>
 				<c:forEach var="i" begin="${map.startPageNo}" end="${map.endPageNo}">
-					<li class="pageInfo_btn page-item"><a class="page-link" href="/comm/commList?currentPage=${i}">${i}</a></li>
+					<li class="pageInfo_btn page-item"><a class="page-link" href="/goodjob/comm/commList?currentPage=${i}">${i}</a></li>
 				</c:forEach>
 				<c:if test="${map.next}">
-					<li class="pageInfo_btn page-item"><a class="page-link" href="/comm/commList?currentPage=${map.currentPage+5}">다음</a></li>
+					<li class="pageInfo_btn page-item"><a class="page-link" href="/goodjob/comm/commList?currentPage=${map.currentPage+5}">다음</a></li>
 				</c:if>
 			</ul>
 			</div>

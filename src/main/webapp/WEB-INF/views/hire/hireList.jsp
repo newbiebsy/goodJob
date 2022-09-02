@@ -124,7 +124,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		e.preventDefault();
 		//console.log("test");
 		moveForm.find("input[name='pageNum']").val($(this).attr("href"));
-		moveForm.attr("action", "/hireList");
+		moveForm.attr("action", "/goodjob/hireList");
 		moveForm.submit(); 
 	})  
 	
@@ -221,7 +221,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<div class="hireArea">
 					<div class="hireInfo">
 						<div class="hireTitle">
-							<a href="/hire/hiredetail?hno=${dto.hno}">${dto.htitle}</a>
+							<a href="/goodjob/hire/hiredetail?hno=${dto.hno}">${dto.htitle}</a>
 						</div>
 						<div class="hireDate">
 							<span>~${dto.hdate}</span>
@@ -262,7 +262,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-													<a href="/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
+													<a href="/goodjob/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
 												</div>
 												</div>
 											</div>
@@ -297,7 +297,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 						</c:if>
 						<!-- 페이지 번호 버튼 -->
 						<c:forEach var="num" begin="${pageMaker.startPage}" end="${pageMaker.endPage}">
-							<li class="pageInfo_btn page-item ${pageMaker.page.pageNum == num ? "active":"" }"><a class="page-link" href="hireList?pageNum=${num}&amount=${pageMaker.page.amount}&keyword=${pageMaker.page.keyword}&smallno=${pageMaker.page.smallno}&jno=${pageMaker.page.jno}&sort=${pageMaker.page.sort}">${num}</a></li>
+							<li class="pageInfo_btn page-item ${pageMaker.page.pageNum == num ? "active":"" }"><a class="page-link" href="/goodjob/hireList?pageNum=${num}&amount=${pageMaker.page.amount}&keyword=${pageMaker.page.keyword}&smallno=${pageMaker.page.smallno}&jno=${pageMaker.page.jno}&sort=${pageMaker.page.sort}">${num}</a></li>
 						</c:forEach>
 						<!-- 다음페이지 버튼 --> 
 						<c:if test="${pageMaker.next}">

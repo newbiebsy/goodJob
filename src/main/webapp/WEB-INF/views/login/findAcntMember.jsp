@@ -12,15 +12,15 @@
 	href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="/login/fonts/icomoon/style.css">
+<link rel="stylesheet" href="/goodjob/login/fonts/icomoon/style.css">
 
 <!-- <link rel="stylesheet" href="/login/css/owl.carousel.min.css"> -->
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/login/css/bootstrap.min.css">
+<link rel="stylesheet" href="/goodjob/login/css/bootstrap.min.css">
 
 <!-- Style -->
-<link rel="stylesheet" href="/login/css/style.css">
+<link rel="stylesheet" href="/goodjob/login/css/style.css">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -52,7 +52,7 @@
 			
 			$.ajax({
 				type : "POST",
-				url : "/findMemberId",
+				url : "/goodjob/findMemberId",
 				data : {
 					"mname" : $mnameID.val(),
 					"mphone" : $mphoneID.val()
@@ -79,7 +79,7 @@
 			
 			$.ajax({
 				type : "POST",
-				url : "/findMemberPwd",
+				url : "/goodjob/findMemberPwd",
 				data : {
 					"mid" : $midPwd.val(),
 					"mname" : $mnamePwd.val(),
@@ -222,7 +222,7 @@
 		  </div>
 		</div>
       <div class="modal-footer">
-        <a href="/login/loginform"><button type="button" class="btn btn-default">로그인 화면으로 돌아가기</button></a>
+        <a href="/goodjob/login/loginform"><button type="button" class="btn btn-default">로그인 화면으로 돌아가기</button></a>
         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
       </div>
     </div>
@@ -249,7 +249,7 @@
 		  </div>
 		</div>
       <div class="modal-footer">
-        <a href="/login/loginform"><button type="button" class="btn btn-default">로그인 화면으로 돌아가기</button></a>
+        <a href="/goodjob/login/loginform"><button type="button" class="btn btn-default">로그인 화면으로 돌아가기</button></a>
         <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
       </div>
     </div>

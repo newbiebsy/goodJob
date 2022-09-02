@@ -322,11 +322,12 @@ public class MainController {
 	
 	@RequestMapping("/dropdownResume")
 	public String dropdownResume(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+		
 		// 이력서 있는 경우
 		if(rs.checkResume(principalDetails.getMdto().getMno()) >0) {
 			return "redirect:myResume";
 		}else {
-			return "redirect:resumeWrite";
+			return "redirect:resumeWrite?listNum="+rs.getWorkInfo(principalDetails.getMdto().getMno()).size();
 		}
 	}
 	

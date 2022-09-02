@@ -154,7 +154,7 @@
 	</div>
 	
 	<div class="bg-light back">
-	<form action="/comm/commWrite" method="post">
+	<form action="/goodjob/comm/commWrite" method="post">
 		<div class="container innerback" style="max-width: 1000px;">
 			<div class="container boardList">
 				<div class="container idHeader">

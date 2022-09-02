@@ -162,7 +162,7 @@
 	</div>
 
 	<div class="bg-lightr back">
-	<form action="/comm/commModify" method="post">
+	<form action="/goodjob/comm/commModify" method="post">
 		<input type="hidden" name="bno" value="${bdto.bno}" />
 		<div class="container innerback" style="max-width: 1000px;">
 			<div class="container boardList">

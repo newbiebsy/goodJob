@@ -202,7 +202,7 @@
 		$("#modifyWrite").click(function(){
 			// console.log("click")
 			var $end = $("#listEnd").val();
-			location.href="resumeWrite?listNum=${resumeSize}";
+			location.href="/goodjob/resumeWrite?listNum=${resumeSize}";
 		})
 	})
 </script>
@@ -227,10 +227,10 @@
 			<div class="myPhoto">
 			<c:choose>
 				<c:when test="${Mlist.mimg != null }">
-					<img src="../uploadfile/${Mlist.mimg }" alt="" />
+					<img src="/goodjob/uploadfile/${Mlist.mimg }" alt="" />
 				</c:when>
 				<c:otherwise>
-					<img src="images/myPhoto.png" alt="" />
+					<img src="/goodjob/images/myPhoto.png" alt="" />
 				</c:otherwise>
 			</c:choose>
 			

@@ -201,7 +201,7 @@
 		
 		$.ajax({
 			type: "POST",
-			url: "locList",
+			url: "/goodjob/locList",
 			data: $('#hireForm').serialize(),
 			dataType: "json",
 			/* beforeSend: function(xhr){
@@ -267,7 +267,7 @@
 		//moveForm.find('input[name="jno"]').val(jno);
 		//moveForm.find('input[name="smallno"]').val(smallno);
 		moveForm.find('input[name="pageNum"]').val(1);
-		moveForm.attr("action", "/hireList");
+		moveForm.attr("action", "/goodjob/hireList");
 		moveForm.submit();
 	})
 	

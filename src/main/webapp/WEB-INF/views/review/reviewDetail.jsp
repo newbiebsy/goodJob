@@ -321,7 +321,7 @@ input[type=submit] {
 		$("#deleteReviewSubmit").click(function(){
 			var reviewDelete = $("#modifyReviewForm")[0];
 			reviewDelete.method="post";
-			reviewDelete.action="/reviewDelete";
+			reviewDelete.action="/goodjob/reviewDelete";
 			reviewDelete.submit();
 		})
 		
@@ -402,7 +402,7 @@ input[type=submit] {
 											</div>
 											<div class="modal-footer">
 												<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-												<a href="/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
+												<a href="/goodjob/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
 											</div>
 										</c:when>
 										<c:otherwise>
@@ -451,7 +451,7 @@ input[type=submit] {
 						</c:choose>
 
 						<div class="re1">
-							<img src="/images/profile.png" alt="profile" />
+							<img src="/goodjob/images/profile.png" alt="profile" />
 							<div class="jtitle">${dto.jtitle } |		
 								<fmt:parseDate value="${dto.regdate}" var="date" pattern="yyyy-MM-dd HH:mm:ss"></fmt:parseDate>
 								<fmt:formatDate value="${date }" pattern="yyyy.MM.dd" />
@@ -511,7 +511,7 @@ input[type=submit] {
 	
 <c:if test="${user.mdto != null }">
 	<%-- 리뷰등록 Modal --%>
-			<form action="/writeOOK" method="get">
+			<form action="/goodjob/writeOOK" method="get">
 				<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 					aria-labelledby="staticBackdropLabel" aria-hidden="true">
 					<div class="modal-dialog modal-lg modal-dialog-centered">
@@ -578,7 +578,7 @@ input[type=submit] {
 	
 	
 	<!-- 수정 Modal -->
-	<form action="/reviewModify" method="get">
+	<form action="/goodjob/reviewModify" method="get">
 		<input type="hidden" name="rno" id="rnoModify" value="" />
 			<div class="modal fade" id="modifyModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
 				<div class="modal-dialog modal-lg modal-dialog-centered">

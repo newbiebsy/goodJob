@@ -83,7 +83,7 @@
 
 
 	<div class="container">
-		<form action="/hire/hireWriterModify" method="get">
+		<form action="/goodjob/hire/hireWriterModify" method="get">
 			<div class="smallContainer">	
 				<div><!-- 첫번쨰영역 제목 -->					
 					<h2><strong>어떤일을 담당할 직원을 찾으시나요?</strong></h2>

@@ -123,7 +123,7 @@
 			
 			$.ajax({
 		    	type : "POST",            
-		        url : "/resume/resumeLike",      
+		        url : "/goodjob/resume/resumeLike",      
 		        contentType: 'application/json',
 		        data : JSON.stringify(params),           
 		        success : function(res){
@@ -168,7 +168,7 @@
 					<span>${dto.mname}</span>
 				</div>
 				<div class="container resumeBody">
-				<a href="/resuemeListDetail?ano=${dto.ano}" style="text-decoration: none;">
+				<a href="/goodjob/resuemeListDetail?ano=${dto.ano}" style="text-decoration: none;">
 					<span class="atitleSpan">${dto.atitle}</span>
 				</a>
 					<button class="heartBtn">
@@ -192,13 +192,13 @@
 		<nav aria-label="Page navigation example" style="display: inline;">
 			<ul class="pagination">
 				<c:if test="${map.prev}">
-					<li class="page-item"><a class="page-link" href="/resume/resumeList?currentPage=${map.currentPage-5}">이전</a></li>
+					<li class="page-item"><a class="page-link" href="/goodjob/resume/resumeList?currentPage=${map.currentPage-5}">이전</a></li>
 				</c:if>
 				<c:forEach var="i" begin="${map.startPageNo}" end="${map.endPageNo}">
-					<li class="page-item"><a class="page-link" href="/resume/resumeList?currentPage=${i}">${i}</a></li>
+					<li class="page-item"><a class="page-link" href="/goodjob/resume/resumeList?currentPage=${i}">${i}</a></li>
 				</c:forEach>
 				<c:if test="${map.next}">
-					<li class="page-item"><a class="page-link" href="/resume/resumeList?currentPage=${map.currentPage+5}">다음</a></li>
+					<li class="page-item"><a class="page-link" href="/goodjob/resume/resumeList?currentPage=${map.currentPage+5}">다음</a></li>
 				</c:if>
 			</ul>
 		</nav>	

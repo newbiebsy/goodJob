@@ -54,31 +54,31 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" id="header">
 			<div class="container-fluid">
 				<nav class="navbar navbar-light bg-white">
-					<a class="navbar-brand" href="/"> 
-						<img src="/images/logo.png" alt="" width="130" height="35">
+					<a class="navbar-brand" href="/goodjob"> 
+						<img src="/goodjob/images/logo.png" alt="" width="130" height="35">
 					</a>
 				</nav>
 				<div class="collapse navbar-collapse" id="navbarContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuName">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/hireList">채용공고</a></li>
+							aria-current="page" href="/goodjob/hireList">채용공고</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/reviewList">기업리뷰</a></li>
+							aria-current="page" href="/goodjob/reviewList">기업리뷰</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/comm/commList">커뮤니티</a></li>
+							aria-current="page" href="/goodjob/comm/commList">커뮤니티</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/resume/resumeList">이력서 열람</a></li>
+							aria-current="page" href="/goodjob/resume/resumeList">이력서 열람</a></li>
 							<!-- 회원/기업 주소 다르게 -->
 							<!-- 드롭다운 -->
 						<li class="nav-item dropdown profile">
 				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				           <img src="/images/profile.png" alt="" class="rounded-circle" />
+				           <img src="/goodjob/images/profile.png" alt="" class="rounded-circle" />
 				          </a>
 				          <ul class="dropdown-menu">
-				            <li><a class="dropdown-item" href="/myPage/myPageCompany">기업페이지</a></li>
-				            <li><a class="dropdown-item" href="/hire/hireWriter">공고등록</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/myPage/myPageCompany">기업페이지</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/hire/hireWriter">공고등록</a></li>
 				            <li><hr class="dropdown-divider"></li>
-				            <li><a class="dropdown-item" href="/logout">로그아웃</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/logout">로그아웃</a></li>
 				          </ul>
 				       </li>
 					</ul>					

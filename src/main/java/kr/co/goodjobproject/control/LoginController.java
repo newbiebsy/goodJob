@@ -8,27 +8,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import kr.co.goodjobproject.service.MemberService;
 
 @Controller
-@RequestMapping("login")
 public class LoginController {
 	
 	@Autowired
 	MemberService service;
 
 //	// 로그인 폼으로 이동
-	@GetMapping("/loginform")
+	@GetMapping("/login/loginform")
 	public String loginform() {
 //		System.out.println("로그인폼");
 		return "login/loginform";
 	}
 	
 	// 일반 회원 회원가입 폼으로 이동
-	@GetMapping("/registerformMember")
+	@GetMapping("/login/registerformMember")
 	public String registerMember() {
 		return "login/registerformMember";
 	}
 	
 	// 기업 회원 회원가입 폼으로 이동
-	@GetMapping("/registerformCompany")
+	@GetMapping("/login/registerformCompany")
 	public String registerCompany() {
 		return "login/registerformCompany";
 	}

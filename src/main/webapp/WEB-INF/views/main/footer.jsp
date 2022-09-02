@@ -56,7 +56,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 	<div class="container">
 		<div class="footerTop">
 			<div class="logo">
-				<img src="../images/logo.png" alt="" width="110" height="30">
+				<img src="/goodjob/images/logo.png" alt="" width="110" height="30">
 			</div>
 			<div class="footerLinks">
 				<a href="#">기업소개</a>
@@ -64,11 +64,11 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<a href="#">개인정보 처리방침</a>
 				<a href="#">고객센터</a>
 				<span class="app">
-					<img src="../images/insta.jpg" alt="" />
-					<img src="../images/facebook.jpg" alt="" />
-					<img src="../images/kakao.jpg" alt="" />
-					<img src="../images/apple.jpg" alt="" />
-					<img src="../images/android.jpg" alt="" />
+					<img src="/goodjob/images/insta.jpg" alt="" />
+					<img src="/goodjob/images/facebook.jpg" alt="" />
+					<img src="/goodjob/images/kakao.jpg" alt="" />
+					<img src="/goodjob/images/apple.jpg" alt="" />
+					<img src="/goodjob/images/android.jpg" alt="" />
 				</span>
 			</div>
 		</div>

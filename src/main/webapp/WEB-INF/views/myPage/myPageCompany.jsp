@@ -393,7 +393,7 @@ function deleteCompany(){
 	}else{
 		// console.log("여기")
 		$.ajax({
-			url : "/company/delete",
+			url : "/goodjob/company/delete",
 			type : "POST",
 			data : {
 				"pwd" : $inputPassword
@@ -402,7 +402,7 @@ function deleteCompany(){
 				alert("회원 탈퇴가 완료되었습니다. 감사합니다.")
 
 				if(data == 1){
-					location.href="/logout";
+					location.href="/goodjob/logout";
 				}else{
 					alert("비밀번호를 다시 한 번 확인해주시기 바랍니다.")
 				}
@@ -421,31 +421,31 @@ function deleteCompany(){
 		<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" id="header">
 			<div class="container-fluid">
 				<nav class="navbar navbar-light bg-white">
-					<a class="navbar-brand" href="/"> 
-						<img src="/images/logo.png" alt="" width="130" height="35">
+					<a class="navbar-brand" href="/goodjob"> 
+						<img src="/goodjob/images/logo.png" alt="" width="130" height="35">
 					</a>
 				</nav>
 				<div class="collapse navbar-collapse" id="navbarContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="menuName">
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/hireList">채용공고</a></li>
+							aria-current="page" href="/goodjob/hireList">채용공고</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/reviewList">기업리뷰</a></li>
+							aria-current="page" href="/goodjob/reviewList">기업리뷰</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/comm/commList">커뮤니티</a></li>
+							aria-current="page" href="/goodjob/comm/commList">커뮤니티</a></li>
 						<li class="nav-item"><a class="nav-link active"
-							aria-current="page" href="/resume/resumeList">이력서 열람</a></li>
+							aria-current="page" href="/goodjob/resume/resumeList">이력서 열람</a></li>
 							<!-- 회원/기업 주소 다르게 -->
 							<!-- 드롭다운 -->
 						<li class="nav-item dropdown profile">
 				          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-				           <img src="/images/profile.png" alt="" id="profileImg" class="rounded-circle" />
+				           <img src="/goodjob/images/profile.png" alt="" id="profileImg" class="rounded-circle" />
 				          </a>
 				          <ul class="dropdown-menu">
-				            <li><a class="dropdown-item" href="/myPage/myPageCompany">기업페이지</a></li>
-				            <li><a class="dropdown-item" href="/hire/hireWriter">공고등록</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/myPage/myPageCompany">기업페이지</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/hire/hireWriter">공고등록</a></li>
 				            <li><hr class="dropdown-divider"></li>
-				            <li><a class="dropdown-item" href="/logout">로그아웃</a></li>
+				            <li><a class="dropdown-item" href="/goodjob/logout">로그아웃</a></li>
 				          </ul>
 				       </li>
 					</ul>					
@@ -474,7 +474,7 @@ function deleteCompany(){
 		</div>
 			<div class="row" >
 				<div class="col-md-3" id="moreInfo">
-					<form action="/myPage/insertImgCom" method="post" enctype="multipart/form-data">
+					<form action="/goodjob/myPage/insertImgCom" method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 					  <input class="form-control" type="file" id="formFile" name="files">
 					</div>
@@ -512,7 +512,7 @@ function deleteCompany(){
 							  <c:forEach var="dto" items="${aList }" varStatus="i" >
 						    	<div class="carousel-item active">
 						      <!-- <img src="../resources/img/heart0.png" class="d-block w-100" alt="..."> -->
-						         <a href="/resuemeListDetail?ano=${dto.ano}">
+						         <a href="/goodjob/resuemeListDetail?ano=${dto.ano}">
 						     	  <div class="detail">
 								      <h3>${dto.atitle}</h3>
 								      <h3>${nList[i.index] }</h3>
@@ -548,7 +548,7 @@ function deleteCompany(){
 							      <div class="col-6"></div>
 							      <div class="col-3"><a class="btn btn-secondary" href="/hire/hireWriterModify2?hno=${dto.hno }" role="button" id="btnModify">수정</a></div>
 							      <div class="col-3"><a class="btn btn-secondary" href="/deleteHireWriter?hno=${dto.hno }" role="button" id="btnDelete">삭제</a></div>
-						      <a href="/hire/hiredetail?hno=${dto.hno}">
+						      <a href="/goodjob/hire/hiredetail?hno=${dto.hno}">
 							      <div class="col-10"><p class="fs-2">${dto.htitle }</p></div>
 						      </a>
 							      <div class="col-10"><p class="fs-4">${locaList[j.index] }/${dto.hworkinfo }/${dto.hform }</p></div><div class="col-2"><img class="like" id="likeImg" src="../images/bookmark1.png" alt="좋아요" />${bookMarkNo }</div>

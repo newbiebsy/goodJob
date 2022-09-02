@@ -163,7 +163,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		e.preventDefault();
 		
 		moveForm.append("<input type='hidden' name='rno' value='"+$(this).attr("href")+"'>");
-		moveForm.attr("action", "/reviewList/get");
+		moveForm.attr("action", "/goodjob/reviewList/get");
 		moveFrom.submit();
 		
 	}); 
@@ -174,7 +174,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		e.preventDefault();
 		//console.log("test");
 	    moveForm.find('input[name="pageNum"]').val($(this).attr("href"));
-	    moveForm.attr("action", "/reviewList");
+	    moveForm.attr("action", "/goodjob/reviewList");
 	    moveForm.submit();  
 	         
 	});
@@ -192,7 +192,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 			//console.log("test");	
 			let moveForm = $("#moveForm"); 
 			$("#result").text("sort : "+sort)
-			location.href="/reviewList?pageNum="+$pageNum+"&amount="+$amount+"&search="+$search+"&sort="+sort;
+			location.href="/goodjob/reviewList?pageNum="+$pageNum+"&amount="+$amount+"&search="+$search+"&sort="+sort;
 			//console.log(sort);		
 			//moveForm.find('input[name="pageNum"]').val(1);
 			//moveForm.find('input[name="sort"]').val(sort);
@@ -250,7 +250,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 					<div class="hireArea">
 						<div class="hireInfo">
 							<div class="hireTitle">
-									<a href="reviewDetail?cno=${dto.cno }">${dto.cname }</a>						
+									<a href="/goodjob/reviewDetail?cno=${dto.cno }">${dto.cname }</a>						
 							</div>
 							<div class="hireDate">
 								<!-- 기업평점 평균값 -->
@@ -276,7 +276,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 							<div class="comTitle"></div>
 							<div class="bookmark">
 								<span>${dto.cnt }</span>
-								<a href="reviewDetail?cno=${dto.cno }"><img src="/images/writing.png" alt=""/></a>												
+								<a href="/goodjob/reviewDetail?cno=${dto.cno }"><img src="/goodjob/images/writing.png" alt=""/></a>												
 							</div>
 							<div class="floatDelete"></div>
 						</div>

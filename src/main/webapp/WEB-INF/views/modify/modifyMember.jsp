@@ -319,7 +319,7 @@ function formSubmit(){
 <body>
 	
 	<div class="container">
-	<form action="modifyMemberOk" name="frm" method="post" onsubmit="return formSubmit()">
+	<form action="/goodjob/modifyMemberOk" name="frm" method="post" onsubmit="return formSubmit()">
 		<p class="fs-1 fw-bolder">개인정보수정</p>
 			<div class="row">
 				<input class="form-control" type="hidden" value="${mdto.mno }" aria-label="Disabled input example" id="mno" >

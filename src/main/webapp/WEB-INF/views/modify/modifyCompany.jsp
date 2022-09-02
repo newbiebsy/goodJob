@@ -313,7 +313,7 @@ p{
 <body>
 	
 	<div class="container">
-	<form action="modifyCompanyOk" name="frm" method="post" onsubmit="return formSubmit()" >
+	<form action="/goodjob/modifyCompanyOk" name="frm" method="post" onsubmit="return formSubmit()" >
 		<p class="fs-1 fw-bolder">기업정보수정</p>
 			<div class="row">
 				<span>

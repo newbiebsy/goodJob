@@ -8,9 +8,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="ko-KR">
-<link href="/hire/layout.css" media="all" rel="stylesheet"
+<link href="/goodjob/hire/layout.css" media="all" rel="stylesheet"
 	type="text/css">
-<link href="/hire/jobs-view.css" media="all" rel="stylesheet"
+<link href="/goodjob/hire/jobs-view.css" media="all" rel="stylesheet"
 	type="text/css">
 <!-- jquery cdn -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -131,7 +131,7 @@
 		
 		// 좋아요 버튼 눌릴때마다 좋아요 요청
 		$.ajax({
-			url : "/hire/likeUpdate",
+			url : "/goodjob/hire/likeUpdate",
 			type : "get",
 			data : {
 				"flag" : flag,
@@ -143,11 +143,11 @@
 					
 				if (data == "del") { // del 로 답이오면 삭제 => flag = 0;
 					flag = 0;
-					like.attr("src", "/images/heart0.png")
+					like.attr("src", "/goodjob/images/heart0.png")
 					$("#bookmarkCnt")[0].innerText = bookmarkCnt -1;
 				} else if (data == "ins") { // ins 로 답이오면 추가 => flag =1;
 					flag = 1;
-					like.attr("src", "/images/heart1.png")
+					like.attr("src", "/goodjob/images/heart1.png")
 					$("#bookmarkCnt")[0].innerText = bookmarkCnt +1;
 				}
 			}
@@ -212,20 +212,20 @@
 			<div class="wrap_jv_cont">
 				<div class="wrap_jv_header">
 					<div class="jv_header">
-						<a href="/reviewDetail?cno=${model.cno }" title=${model.cname }
+						<a href="/goodjob/reviewDetail?cno=${model.cno }" title=${model.cname }
 							class="company" target="_blank"> ${model.cname } </a>
 						<h1 class="tit_job">${model.htitle }</h1>
 						
 						<c:if test="${like != null}">
 							<button type="button" style="text-align: center;" class="btn_scrap" title="공고좋아요"
 								onclick="LikeUpdate()">
-								<img class="like" style="width: 40px; margin-top: -8px;" id="like" src="/images/heart1.png" alt="좋아요" />
+								<img class="like" style="width: 40px; margin-top: -8px;" id="like" src="/goodjob/images/heart1.png" alt="좋아요" />
 								<div id="bookmarkCnt" style="font-size: 15px; margin-top: -5px;" >${bookmarkCnt}</div>
 							</button>
 						</c:if>
 						<button type="button" style="text-align: center;" class="btn_scrap" title="공고좋아요"
 							onclick="LikeUpdate()">
-								<img class="like" style="width: 40px; margin-top: -8px;" id="like" src="/images/heart0.png" alt="좋아요" />
+								<img class="like" style="width: 40px; margin-top: -8px;" id="like" src="/goodjob/images/heart0.png" alt="좋아요" />
 								<div id="bookmarkCnt" style="font-size: 15px; margin-top: -5px;">${bookmarkCnt}</div>
 						</button>
 						
@@ -366,7 +366,7 @@
 						<div class="wrap_info">
 							<div class="title">
 								<span class="company_name" title="${model.cname }">${model.cname }</span>
-								<a href="/reviewDetail?cno=${model.cno }" title="기업정보로 이동"
+								<a href="/goodjob/reviewDetail?cno=${model.cno }" title="기업정보로 이동"
 									class="spr_jview btn_jview btn_link" target="blank"><strong>기업정보</strong></a>
 							</div>
 							<div class="info">
@@ -406,7 +406,7 @@
 						<div class="review">
 							<div class="goReview">
 								<span class="jv_title">${model.cname } 회사의 리뷰 </span>
-								<a href="/reviewDetail?cno=${model.cno }" title="기업정보로 이동"
+								<a href="/goodjob/reviewDetail?cno=${model.cno }" title="기업정보로 이동"
 										class="spr_jview btn_jview btn_link goReview" target="blank"><strong>회사리뷰 바로가기</strong></a>
 							</div>
 							<c:if test="${review !=null }">

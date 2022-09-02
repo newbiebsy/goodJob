@@ -126,7 +126,7 @@
 	// 댓글 수정
 	function modifyComment(bcno,index,contents,bno){
 		$(".comment"+index)[0].outerHTML = 
-				'<form action="/comm/modifyComment" method="post">'
+				'<form action="/goodjob/comm/modifyComment" method="post">'
 				+ '<div class="commentWrite2"><textarea name="bccontents" maxlength="300" id="" placeholder="내용을 입력해주세요(300자)" >'+contents+'</textarea></div>'
 				+ '<div class="container btnBox2" style="text-align: left;">'
 				+ '<input class="btn btn2" style="float:right; position: absolute; top:55%; right:0%" type="submit" value="수정" />'
@@ -142,7 +142,7 @@
 		
 		$("input[name='bcno']").attr("value",bcno);
 		frm.method ="post";
-		frm.action = "/comm/deleteComment";
+		frm.action = "/goodjob/comm/deleteComment";
 		frm.submit();
 	}
 </script>
@@ -193,17 +193,17 @@
 				<textarea name="bccontents" placeholder="일반회원만 이용하실 수 있습니다." readonly="readonly" ></textarea>
 			</div>
 			<div class="container btnBox" style="text-align: left;">
-				<a class="btn" href="/comm/commList">목록으로</a>
+				<a class="btn" href="/goodjob/comm/commList">목록으로</a>
 			</div>
 		</c:when>
 		<c:otherwise>
-			<form action="/comm/commentWrite" method="post">
+			<form action="/goodjob/comm/commentWrite" method="post">
 			<div class="container commentWrite">
 				<textarea name="bccontents" maxlength="300" id="" placeholder="내용을 입력해주세요(300자)" ></textarea>
 			</div>
 			<div class="container btnBox" style="text-align: left;">
 				<!-- 전에 url로 이동할때 어떻게 해야할지 궁금 -->
-				<a class="btn listSubmit" style="background-color: white;" href="/comm/commList">목록으로</a>
+				<a class="btn listSubmit" style="background-color: white;" href="/goodjob/comm/commList">목록으로</a>
 				<input class="btn commentSubmit" style="background-color: white;" type="submit" value="등록" />
 				<input type="hidden" name="bno" value="${map.dto.bno}" />
 				<input type="hidden" name="mno" value="${map.loginMno}" />

@@ -345,7 +345,7 @@ button#subscribeBtn{
 		if(subscribeCheck == false){
 			alert("이용약관에 동의해주시기 바랍니다")
 		}else{
-			location.href="/subscribe"
+			location.href="/goodjob/subscribe"
 		}
 		
 		/* var subscribeCheck = document.getElementById("flexCheckDefault").getAttribute("checked")
@@ -375,7 +375,7 @@ button#subscribeBtn{
 		}else{
 			// console.log("여기")
 			$.ajax({
-				url : "/member/delete",
+				url : "/goodjob/member/delete",
 				type : "POST",
 				data : {
 					"pwd" : $inputPassword
@@ -383,7 +383,7 @@ button#subscribeBtn{
 				success : function(data){
 					alert("회원 탈퇴가 완료되었습니다. 감사합니다.")
 					if(data == 1){
-						location.href="/logout";
+						location.href="/goodjob/logout";
 					}else{
 						alert("비밀번호를 다시 한 번 확인해주시기 바랍니다.")
 					}
@@ -414,7 +414,7 @@ button#subscribeBtn{
 			<div class="row">
 				<div class="col-md-3" id="moreInfo">
 				<!-- 파일업로드 -->
-					<form action="/myPage/insertImg" method="post" enctype="multipart/form-data">
+					<form action="/goodjob/myPage/insertImg" method="post" enctype="multipart/form-data">
 					<div class="mb-3">
 					  <input class="form-control" type="file" id="formFile" name="files">
 					</div>
@@ -471,7 +471,7 @@ button#subscribeBtn{
 					<button type="button" id="preminum_btn">Premium</button>
 					&nbsp<p class="fw-bold fs-4">프리미엄 회원</p><br />
 						<div class="subscribe">
-						<a href="canclesub"><p class="fw-bold fs-5 ">구독 취소</p></a>
+						<a href="/goodjob/canclesub"><p class="fw-bold fs-5 ">구독 취소</p></a>
 						
 						</div>
 					<div class="col-md-5" style="margin-top: 20px;">
@@ -550,7 +550,7 @@ button#subscribeBtn{
 		</c:choose> 
 				<div class="col-3" id="change">
 					<div class="col-3" id="mset">
-						<a href="/myResume">이력서관리</a><br /><br />
+						<a href="/goodjob/myResume">이력서관리</a><br /><br />
 						<a href="../modify/modifyMember">개인정보수정</a>
 						
 					</div>
@@ -566,7 +566,7 @@ button#subscribeBtn{
 						  <c:forEach var="i" items="${cname}" varStatus="j">
 						    <div class="carousel-item active test2">
 						      <!-- <img src="../resources/img/heart0.png" class="d-block w-100" alt="..."> -->
-						      <a href="/hire/hiredetail?hno=${hlist[j.index].hno }">
+						      <a href="/goodjob/hire/hiredetail?hno=${hlist[j.index].hno }">
 						      <div class="detail">
 							      <h4>${i.cname }</h4>
 							      <h3>${hlist[j.index].htitle }</h3>
@@ -601,7 +601,7 @@ button#subscribeBtn{
 						  <c:forEach var="i" items="${rlist }">
 						    <div class="carousel-item active test2">
 						      <!-- <img src="../resources/img/heart0.png" class="d-block w-100" alt="..."> -->
-						      <a href="/reviewDetail?cno=${i.cno }">
+						      <a href="/goodjob/reviewDetail?cno=${i.cno }">
 						      <div class="detail">
 							      <h4>${i.cname }</h4>
 							      <h3>${i.rtitle }</h3>
@@ -640,7 +640,7 @@ button#subscribeBtn{
 						  <c:forEach var="i" items="${blist }">
 						    <div class="carousel-item active test2">
 						      <!-- <img src="../resources/img/heart0.png" class="d-block w-100" alt="..."> -->
-						      <a href="/comm/commDetail?bno=${i.bno }">
+						      <a href="/goodjob/comm/commDetail?bno=${i.bno }">
 						      <div class="detail">
 							      <button type="button">${i.btag }</button>
 							      <h3>${i.btitle }</h3>

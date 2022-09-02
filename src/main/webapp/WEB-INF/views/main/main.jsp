@@ -219,7 +219,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		// xhr 객체 선언
 		var xhr = new XMLHttpRequest();
 		// 보내는 방식, 보내는 url, 비동기화 여부
-		xhr.open("POST", "/likeUpdate?"+"type="+type+"&hno="+hno, true);
+		xhr.open("POST", "/goodjob/likeUpdate?"+"type="+type+"&hno="+hno, true);
 		
 		
 		xhr.send();
@@ -258,7 +258,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		// xhr 객체 선언
 		var xhr = new XMLHttpRequest();
 		// 보내는 방식, 보내는 url, 비동기화 여부
-		xhr.open("POST", "/main/likeUpdate?"+"type="+type+"&hno="+hno, true);
+		xhr.open("POST", "/goodjob/main/likeUpdate?"+"type="+type+"&hno="+hno, true);
 		
 		
 		xhr.send();
@@ -327,7 +327,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<c:forEach var="dto" items="${Rlist}" begin="0" end="7" varStatus="status">
 					<div class="hireBox">
 						<div class="textBax">
-							<a href="/hire/hiredetail?hno=${dto.hno}">
+							<a href="/goodjob/hire/hiredetail?hno=${dto.hno}">
 								<span id="cname">${dto.cname}</span><br />
 								<span id="htitle">${dto.htitle}</span><br />
 							 </a>					
@@ -352,7 +352,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-													<a href="/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
+													<a href="/goodjob/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
 												</div>
 												</div>
 											</div>
@@ -387,7 +387,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<c:forEach var="dto" items="${Blist}" begin="0" end="7" varStatus="status">
 					<div class="hireBox2">
 						<div class="textBax2">
-							<a href="/hire/hiredetail?hno=${dto.hno}">
+							<a href="/goodjob/hire/hiredetail?hno=${dto.hno}">
 								<span id="cname">${dto.cname}</span><br />
 								<span id="htitle">${dto.htitle}</span><br />
 							 </a>					
@@ -412,7 +412,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 												</div>
 												<div class="modal-footer">
 													<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-													<a href="/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
+													<a href="/goodjob/login/loginform"><button type="button" class="btn btn-primary">&nbsp로그인창으로 이동&nbsp</button></a>
 												</div>
 												</div>
 											</div>

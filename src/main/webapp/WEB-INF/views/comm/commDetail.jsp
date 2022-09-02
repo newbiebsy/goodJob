@@ -175,7 +175,7 @@
 			var boardDeleteForm = $("#deleteBoardForm")[0];
 			
 			boardDeleteForm.method = "post";
-			boardDeleteForm.action = "/comm/deleteBoard";
+			boardDeleteForm.action = "/goodjob/comm/deleteBoard";
 			boardDeleteForm.submit();
 		});
 		
@@ -184,7 +184,7 @@
 			var boardModifyForm = $("#modifyBoardForm")[0];
 			
 			boardModifyForm.method = "get";
-			boardModifyForm.action = "/comm/commModify";
+			boardModifyForm.action = "/goodjob/comm/commModify";
 			boardModifyForm.submit();
 		});
 		
@@ -201,7 +201,7 @@
 			
 	   	$.ajax({
 	    	type : "POST",            
-	        url : "/comm/boardLike",      
+	        url : "/goodjob/comm/boardLike",      
 	        contentType: 'application/json',
 	        data : JSON.stringify(params),           
 	        success : function(map){
@@ -272,7 +272,7 @@
 					<div class="content">${map.dto.bcontents }</div>
 				</div>
 				<div class="tagWrap" style="margin-top: 40px; margin-left: -10px;" >
-					<a href="/comm/commList/${map.dto.btag}" >
+					<a href="/goodjob/comm/commList/${map.dto.btag}" >
 						<span class="tagSpan mx-3">${map.dto.btag}</span>
 					</a>
 				</div>

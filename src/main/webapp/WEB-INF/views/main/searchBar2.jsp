@@ -76,7 +76,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 		moveForm.find('input[name="search"]').val(cname);
 		moveForm.find('input[name="amount"]').val(10);
 		moveForm.find('input[name="pageNum"]').val(1);
-		moveForm.attr("action", "/reviewList");
+		moveForm.attr("action", "/goodjob/reviewList");
 		moveForm.submit();  
 	})
 
@@ -91,7 +91,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 			<input type="text" name="cname" id="cname" value="${pageMaker.page.search}" placeholder="기업명을 입력해주세요."/>
 		</div>
 		<div class="searchBtn">	
-			<img src="/images/Union.png" alt="search" id="btnSearch" />
+			<img src="/goodjob/images/Union.png" alt="search" id="btnSearch" />
 		</div>
 		<div class="test"></div>
 	</div>

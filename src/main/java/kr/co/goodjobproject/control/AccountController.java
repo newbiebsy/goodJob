@@ -144,7 +144,7 @@ public class AccountController {
 	}
 
 	// 일반 회원 아이디 찾기
-	@PostMapping("/findMemberId")
+	@PostMapping("login/findMemberId")
 	@ResponseBody
 	String findMemberId(@RequestParam("mname") String mname, @RequestParam("mphone") String mphone) {
 		// System.out.println(mname+ " : "+mphone);
@@ -153,7 +153,7 @@ public class AccountController {
 	}
 
 	// 일반 회원 비밀번호 찾기 및 임시 패스워드로 변경
-	@PostMapping("/findMemberPwd")
+	@PostMapping("login/findMemberPwd")
 	@ResponseBody
 	String findMemberPwd(@RequestParam("mid") String mid, @RequestParam("mname") String mname,
 			@RequestParam("mphone") String mphone) throws Exception {
@@ -179,7 +179,7 @@ public class AccountController {
 	}
 
 	// 기업 계정 아이디 찾기
-	@PostMapping("/findCompanyId")
+	@PostMapping("login/findCompanyId")
 	@ResponseBody
 	String findCompanyId(@RequestParam("cbin") String cbin, @RequestParam("cmanager") String cmanager) {
 
@@ -187,7 +187,7 @@ public class AccountController {
 	}
 
 	// 기업 계정 패스워드 찾기 및 임시 패스워드로 변경
-	@PostMapping("/findCompanyPwd")
+	@PostMapping("login/findCompanyPwd")
 	@ResponseBody
 	String findCompanyPwd(@RequestParam("cid")String cid, @RequestParam("cbin") String cbin, @RequestParam("cmanager") String cmanager) throws Exception {
 		CompanyDTO cdto = cs.findCompanyPwd(cid, cbin, cmanager);

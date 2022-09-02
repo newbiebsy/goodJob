@@ -12,15 +12,15 @@
 	href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="/login/fonts/icomoon/style.css">
+<link rel="stylesheet" href="/goodjob/login/fonts/icomoon/style.css">
 
-<link rel="stylesheet" href="/login/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/goodjob/login/css/owl.carousel.min.css">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/login/css/bootstrap.min.css">
+<link rel="stylesheet" href="/goodjob/login/css/bootstrap.min.css">
 
 <!-- Style -->
-<link rel="stylesheet" href="/login/css/style.css">
+<link rel="stylesheet" href="/goodjob/login/css/style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 	crossorigin="anonymous"></script>
@@ -80,7 +80,7 @@
 			} else { // 공백아니면 중복체크
 				$.ajax({
 					type : "POST",
-					url : "/login/checkid",
+					url : "/goodjob/login/checkid",
 					data : {
 						"type" : "user",
 						"id" : $mid.val()
@@ -253,7 +253,7 @@
 		$checkEmail.click(function() {
 			$.ajax({
 				type : "POST",
-				url : "mailConfirm",
+				url : "/goodjob/login/mailConfirm",
 				data : {
 					"email" : $memail.val()
 				},
@@ -588,7 +588,7 @@ span {
 							<!-- <h3>회원가입</h3> -->
 							<img src="../images/logo.png" alt="" />
 						</div>
-						<form action="registerOkUser" name="frm" method="post" onsubmit="return formSubmit()">
+						<form action="/goodjob/registerOkUser" name="frm" method="post" onsubmit="return formSubmit()">
 							<!-- <span>아이디</span> -->
 							<div class="form-group first">
 								<label for="mid" id="id">아이디를 입력해주세요 (5~15자 입력)</label> 

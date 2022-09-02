@@ -151,7 +151,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 				<div class="hireArea">
 					<div class="hireInfo">
 						<div class="hireTitle">
-							<a href="reviewDetail?cno=${list.cno }">${list.cname }</a>
+							<a href="/goodjob/reviewDetail?cno=${list.cno }">${list.cname }</a>
 						</div>
 						<div class="hireDate">
 							<!-- 기업평점 평균값 -->
@@ -177,7 +177,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 						</div>
 						<div class="bookmark">
 							<span>${list.cnt }</span>
-							<a href="reviewDetail?cno=${list.cno }"><img src="/images/writing.png" alt=""/></a>	
+							<a href="/goodjob/reviewDetail?cno=${list.cno }"><img src="/goodjob/images/writing.png" alt=""/></a>	
 						</div>
 						<div class="floatDelete"></div>
 					</div>

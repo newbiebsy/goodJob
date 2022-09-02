@@ -108,7 +108,7 @@ url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 	
 	
 	<div class="container">
-		<form action="/hire/hireWriter" method="post">
+		<form action="/goodjob/hire/hireWriter" method="post">
 			<div class="smallContainer">	
 				<div><!-- 첫번쨰영역 제목 -->					
 					<h2><strong>어떤일을 담당할 직원을 찾으시나요?</strong></h2>

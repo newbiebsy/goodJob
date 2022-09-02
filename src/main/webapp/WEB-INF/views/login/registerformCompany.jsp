@@ -9,13 +9,13 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="stylesheet" href="/login/css/owl.carousel.min.css">
+<link rel="stylesheet" href="/goodjob/login/css/owl.carousel.min.css">
 
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="/login/css/bootstrap.min.css">
+<link rel="stylesheet" href="/goodjob/login/css/bootstrap.min.css">
 
 <!-- Style -->
-<link rel="stylesheet" href="/login/css/style.css">
+<link rel="stylesheet" href="/goodjob/login/css/style.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
 	integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 	crossorigin="anonymous"></script>
@@ -226,7 +226,7 @@
 			} else { // 공백아니면 중복체크
 				$.ajax({
 					type : "POST",
-					url : "/login/checkid",
+					url : "/goodjob/login/checkid",
 					data : {
 						"type" : "com",
 						"id" : $cid.val()
@@ -389,12 +389,11 @@
 		$checkEmail.click(function() {
 			$.ajax({
 				type : "POST",
-				url : "mailConfirm",
+				url : "/goodjob/login/mailConfirm",
 				data : {
 					"email" : $cemail.val()
 				},
 				success : function(data){
-					console.log("data : "+data);
 					chkEmailConfirm(data, $cemailconfirm, $emailconfirmTxt);
 				}
 			})
@@ -709,7 +708,7 @@ span {
 				<div class="col-md-6 contents bg-white" style="padding-left: 150px;">
 					<div class="col-md-8-custom company_register">
 						
-						<form action="registerOkCom" name="frm" method="post" onsubmit="return formSubmit()">
+						<form action="/goodjob/registerOkCom" name="frm" method="post" onsubmit="return formSubmit()">
 							<div class="mb-4">
 								<!-- <h3>기업 인증</h3> -->
 								<img src="../images/logo.png" alt="" />
